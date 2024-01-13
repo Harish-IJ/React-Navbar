@@ -1,0 +1,58 @@
+.Nav-Holder{
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(3,1fr);
+    margin-block: 1.6rem;
+}
+
+.Logo{
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+    align-self: center;
+}
+
+.Nav-Menu {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    align-self: center;
+    justify-self: end;
+    text-decoration: none;
+    color: black;
+    /* background-color: skyblue; */
+    
+    /* border-radius: 4px; */
+    transition: all ease 0.2s;
+  }
+  
+  .uline{
+      position: relative;
+      padding-inline: 1rem;
+      padding-block: 0.4rem;
+  }
+  
+  .uline::after{
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: black;
+      width: 30%;
+      top: 36px;
+      left: 1rem;
+      scale: 0 1;
+      transition: scale 250ms;
+  }
+  
+  .uline:hover::after{
+      scale: 1 1;
+  }
+  
+  
+  .Nav-active {
+    font-weight: 800;
+    transition: all ease 0.2s;
+  }
+  
+  .item1 {
+    grid-column: 3/4;
+  }
