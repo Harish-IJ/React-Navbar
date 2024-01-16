@@ -1,6 +1,6 @@
 import React from "react";
-import "./navbar.css";
 import { NavLink } from "react-router-dom";
+import "./navbar.css";
 
 const Navbar = () => {
   return (
@@ -46,24 +46,21 @@ const Navbar = () => {
         >
           <div className="uline">Updates</div>
         </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isActive
+              ? "Nav-Button-active"
+              : isPending
+              ? "Nav-Button"
+              : "Nav-Button"
+          }
+          to="/contactme"
+        >
+          Contact Me
+        </NavLink>
       </div>
     </>
   );
 };
 
 export default Navbar;
-
-// const Navbar = () => {
-//   return (
-//     <>
-//         <div className='Nav-Holder'>
-//             <Link to={"/"} className='logo'>hij</Link>
-//             <Link to={"/"} className='Nav-Menu i1 active'>Home</Link>
-//             <Link to={"/projects"} className='Nav-Menu'>Projects</Link>
-//             <Link to={"/updates"} className='Nav-Menu'>Updates</Link>
-//         </div>
-//     </>
-//   )
-// }
-
-// export default Navbar

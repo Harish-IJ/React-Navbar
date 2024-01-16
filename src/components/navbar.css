@@ -1,6 +1,6 @@
 .Nav-Holder{
     display: grid;
-    grid-template-columns: 1fr 2fr repeat(3,1fr);
+    grid-template-columns: 1fr 2fr repeat(3,1fr) 1.2fr;
     margin-block: 1.6rem;
 }
 
@@ -55,4 +55,41 @@
   
   .item1 {
     grid-column: 3/4;
+  }
+
+  .Nav-Button {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    align-self: center;
+    justify-self: end;
+    text-decoration: none;
+    padding-block: 0.8rem;
+    padding-inline: 1.6rem;
+    transition: all ease 0.3s;
+    color: white;
+    background-color: black;
+    text-wrap: nowrap;
+    
+  }
+  
+  .Nav-Button:hover {
+    background: none;
+    box-shadow: 0 0 0 1.8px #000;
+    color: #000;
+  }
+  
+  .Nav-Button-active {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    align-self: center;
+    justify-self: end;
+    text-decoration: none;
+    padding-block: 0.8rem;
+    padding-inline: 1.6rem;
+    background: none;
+    box-shadow: 0 0 0 2.2px #000;
+    color: #000;
+    text-wrap: nowrap;
   }
