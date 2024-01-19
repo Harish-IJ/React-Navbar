@@ -1,95 +1,178 @@
-.Nav-Holder{
-    display: grid;
-    grid-template-columns: 1fr 2fr repeat(3,1fr) 1.2fr;
-    margin-block: 1.6rem;
+.Nav-Holder {
+  position: fixed;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 2fr 5fr;
+  width: 100%;
+  background-color: aliceblue;
+  padding-inline: max(1.2rem, 6vw);
+  padding-block: 1.2rem;
 }
 
-.Logo{
-    text-decoration: none;
-    color: black;
-    font-size: 1.25rem;
-    align-self: center;
+.NavMenuList {
+  grid-column: 3/4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.2fr;
+  column-gap: 0.2rem;
+}
+
+.Logo {
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
+  align-self: center;
+}
+
+.MenuToggle {
+  align-self: center;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  cursor: pointer;
+  padding: 0.8rem;
+  grid-column: -1/-2;
+  display: none;
+}
+
+.Rect1 {
+  height: 0.3rem;
+  width: 2rem;
+  background: #000;
+  transform-origin: left;
+  transition: ease-in-out 0.5s;
+}
+
+.Rect2 {
+  height: 0.3rem;
+  width: 2rem;
+  transform-origin: center;
+  background: #000;
+  transition: ease-in-out 0.5s;
+}
+
+.Rect3 {
+  transition: ease-in-out 0.5s;
+  height: 0.3rem;
+  width: 1.4rem;
+  background: #000;
+  align-self: flex-end;
+}
+
+.Rect1.T-active {
+  transform: translateX(1rem);
+  background: none;
+}
+
+.Rect2.T-active {
+  scale: 0.8 1;
+}
+
+.Rect3.T-active {
+  transform: translateX(-1rem);
+  background: none;
 }
 
 .Nav-Menu {
-    font-family: "Urbanist", sans-serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-    align-self: center;
-    justify-self: end;
-    text-decoration: none;
-    color: black;
-    /* background-color: skyblue; */
-    
-    /* border-radius: 4px; */
-    transition: all ease 0.2s;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  align-self: center;
+  justify-self: end;
+  text-decoration: none;
+  color: black;
+  transition: all ease 0.2s;
+}
+
+.uline {
+  position: relative;
+  padding-inline: 1rem;
+  padding-block: 0.4rem;
+}
+
+.uline::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: black;
+  width: 40%;
+  top: 36px;
+  left: 1rem;
+  scale: 0 1;
+  transition: scale 250ms;
+}
+
+.uline:hover::after {
+  scale: 1 1;
+}
+
+.Nav-Menu-active {
+  font-weight: 800;
+}
+
+.Nav-Button {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  align-self: center;
+  justify-self: end;
+  text-decoration: none;
+  padding-block: 0.8rem;
+  padding-inline: 1.6rem;
+  transition: all ease 0.3s;
+  color: white;
+  background-color: black;
+  text-wrap: nowrap;
+  display: block;
+}
+
+.Nav-Button:hover {
+  background: none;
+  box-shadow: 0 0 0 1.8px #000;
+  color: #000;
+}
+
+.Nav-Button-active {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  align-self: center;
+  justify-self: end;
+  text-decoration: none;
+  padding-block: 0.8rem;
+  padding-inline: 1.6rem;
+  background: none;
+  box-shadow: 0 0 0 2.2px #000;
+  color: #000;
+  text-wrap: nowrap;
+}
+
+@media (max-width: 760px) {
+  .MenuToggle {
+    display: flex;
   }
-  
-  .uline{
-      position: relative;
-      padding-inline: 1rem;
-      padding-block: 0.4rem;
-  }
-  
-  .uline::after{
-      content: "";
-      position: absolute;
-      height: 2px;
-      background-color: black;
-      width: 30%;
-      top: 36px;
-      left: 1rem;
-      scale: 0 1;
-      transition: scale 250ms;
-  }
-  
-  .uline:hover::after{
-      scale: 1 1;
-  }
-  
-  
-  .Nav-active {
-    font-weight: 800;
-    transition: all ease 0.2s;
-  }
-  
-  .item1 {
-    grid-column: 3/4;
+  .NavMenuList {
+    /* height: 80vh; */
+    grid-template-columns: 12rem;
+    position: absolute;
+    background-color: aliceblue;
+    top: 10vh;
+    row-gap: 3rem;
+    padding-block: 26vh;
+    transition: 0.5s all ease-in-out;
+    padding-inline: 4rem 8rem;
   }
 
-  .Nav-Button {
-    font-family: "Urbanist", sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    align-self: center;
-    justify-self: end;
-    text-decoration: none;
-    padding-block: 0.8rem;
-    padding-inline: 1.6rem;
-    transition: all ease 0.3s;
-    color: white;
-    background-color: black;
-    text-wrap: nowrap;
-    
+  .NavMenuList.NMinactive {
+    right: -28rem;
   }
-  
-  .Nav-Button:hover {
-    background: none;
-    box-shadow: 0 0 0 1.8px #000;
-    color: #000;
+
+  .NavMenuList.NMactive {
+    right: -5rem;
   }
-  
-  .Nav-Button-active {
-    font-family: "Urbanist", sans-serif;
-    font-size: 1.25rem;
-    font-weight: 800;
-    align-self: center;
-    justify-self: end;
-    text-decoration: none;
-    padding-block: 0.8rem;
-    padding-inline: 1.6rem;
-    background: none;
-    box-shadow: 0 0 0 2.2px #000;
-    color: #000;
-    text-wrap: nowrap;
+
+  .uline::after {
+    right: 1rem;
+    left: auto;
   }
+}
