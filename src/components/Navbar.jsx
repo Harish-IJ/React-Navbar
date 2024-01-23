@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
+import Nav from "../data.json"
 
 const Navbar = () => {
   const [navtoggle, setNavtoggle] = useState(false);
@@ -22,7 +23,9 @@ const Navbar = () => {
             navtoggle ? "NavMenuList NMactive" : "NavMenuList NMinactive"
           }
         >
-          <NavLink
+          {Nav.map((data,index) => (
+            <NavLink
+            key={index}
             className={({ isActive, isPending }) =>
               isActive
                 ? "Nav-Menu Nav-Menu-active"
@@ -30,37 +33,12 @@ const Navbar = () => {
                 ? "Nav-Menu"
                 : "Nav-Menu"
             }
-            to="/"
+            to={data.link}
             onClick={onToggle}
           >
-            <div className="uline">Home</div>
+            <div className="uline">{data.name}</div>
           </NavLink>
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isActive
-                ? "Nav-Menu Nav-Menu-active"
-                : isPending
-                ? "Nav-Menu"
-                : "Nav-Menu"
-            }
-            to="/projects"
-            onClick={onToggle}
-          >
-            <div className="uline">Projects</div>
-          </NavLink>
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isActive
-                ? "Nav-Menu Nav-Menu-active"
-                : isPending
-                ? "Nav-Menu"
-                : "Nav-Menu"
-            }
-            to="/updates"
-            onClick={onToggle}
-          >
-            <div className="uline">Updates</div>
-          </NavLink>
+          ))}
           <NavLink
             className={({ isActive, isPending }) =>
               isActive
