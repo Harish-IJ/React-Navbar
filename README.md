@@ -61,10 +61,5 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Authors
 
-* **Harish I J** - *Web Developer & Designer* - [Harish I J](https://github.com/Harish-Creates/hij-react-navbar) - **
+* **Harish I J** - *Web Developer & Designer* - [Harish I J](https://github.com/Harish-Creates/hij-react-navbar)
 
-## Acknowledgements
-
-* []()
-* []()
-* []()
