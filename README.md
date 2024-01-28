@@ -29,15 +29,13 @@ Make sure that you have "Node JS" pre-installed in order to install npm packages
 
 ### Installation
 
-1. Clone the repository in your machine
+1. Clone the repository in your machine using the url of repository with "git clone <url>" command if you have git installed in your machine or download the repository & extract it.
 
-2. Open in your preferred code-editor, if your code editor supports a terminal then open & run:
-"npm install"
+2. Locate the folder inside your code editor's terminal or in your command prompt.
 
-3. If you don't have a inbuilt terminal in it, open command prompt & locate the folder using "cd" & run:
-"npm install"
+3. Then run "npm install"
 
-4. Then start the build by typing "npm run dev" or else"npm run dev -- --host" to host in a ip address.
+4. Now start the build by typing "npm run dev" or else by "npm run dev -- --host" to host in a ip address.
 
 ## Usage
 
@@ -49,7 +47,6 @@ Contributions are what make the open source community such an amazing place to b
 * If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/Harish-Creates/hij-react-navbar/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
-* Please also read through the [Code Of Conduct](https://github.com/Harish-Creates/hij-react-navbar/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
 
 ### Creating A Pull Request
 
