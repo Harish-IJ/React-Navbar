@@ -1,5 +1,7 @@
+/* Font-Family Import */
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Default Styles Overriding */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,13 +9,10 @@
   font-family: "Urbanist", sans-serif;
 }
 
-.page-content {
-  margin-inline: max(1.2rem, 6vw);
-  height: 150vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 5rem;
-  font-weight: 600;
-  color: aliceblue;
+
+/* CSS Varisables */
+:root {
+  --whites: #f1f2f6;
+  --blacks: #171717;
+  --bg-blur-whites: #f1f2f666;
 }

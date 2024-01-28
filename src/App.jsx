@@ -7,17 +7,20 @@ import Updates from "./pages/Updates.jsx";
 import ContactMe from "./pages/ContactMe.jsx";
 import "./app.css";
 
+// Common Routes for the demo
 const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/projects" element={<Projects />}></Route>
-          <Route path="/updates" element={<Updates />}></Route>
-          <Route path="/contactme" element={<ContactMe />}></Route>
-        </Routes>
+        <div className="layout">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/projects" element={<Projects />}></Route>
+            <Route path="/updates" element={<Updates />}></Route>
+            <Route path="/contactme" element={<ContactMe />}></Route>
+          </Routes>
+        </div>
       </BrowserRouter>
     </>
   );
