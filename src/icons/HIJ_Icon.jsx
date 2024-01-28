@@ -7,7 +7,7 @@ export const HIJ_Icon = () => {
       viewBox="0 0 25 33"
       fill="none"
     >
-      <g clip-path="url(#clip0_12_9)">
+      <g clipPath="url(#clip0_12_9)">
         <path d="M3.85789 0H0V22.8461H3.85789V0Z" fill="#171717" />
         <path
           d="M6.27588 12.6924H7.74547C9.06349 12.6924 10.1338 13.7487 10.1338 15.0496V22.8464H6.27588V12.6924Z"
